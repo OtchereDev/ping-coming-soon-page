@@ -1,0 +1,225 @@
+/* variable*/
+
+:root {
+    --Blue: rgb(79, 125, 243);
+    --PaleBlue: hsl(223, 100%, 88%);
+    --LightRed: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+
+
+/* - Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+- Weights: 300, 600, 700 */
+
+
+/* reset*/
+
+body,
+p,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* base style*/
+
+html {
+    height: 100vh;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    /* padding: 5% auto 1% auto; */
+}
+
+.wholecont {
+    width: 100%;
+    height: 100%;
+    /* margin: 20% auto 1% auto; */
+    padding-top: 5%;
+    margin-bottom: 0;
+}
+
+input {
+    padding: 10px 16px;
+    border-radius: 30px;
+    border: 1px solid var(--Blue);
+    display: inline-block;
+    text-align: left;
+    width: 65%;
+    line-height: 2em;
+}
+
+input::placeholder {
+    padding: 8%;
+    color: var(--Gray);
+}
+
+input:required {
+    color: var(--LightRed);
+    font-style: italic;
+    content: "please provide a valid email";
+}
+
+.intouch {
+    text-align: center;
+}
+
+.button {
+    background: var(--Blue);
+    border: 2px none var(--Blue);
+    color: white;
+    padding: 6px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    box-shadow: 1px 2px 3px rgba(79, 125, 243, 0.5);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.2em;
+    display: block;
+    margin: 5% auto 5% auto;
+    width: 70%;
+    line-height: 2em;
+}
+
+.button:hover {
+    background-color: rgba(79, 125, 243, 0.37);
+    border: 2px none rgba(79, 125, 243, 0.5);
+}
+
+.socials ul {
+    display: flex;
+    justify-content: center;
+}
+
+.socials ul li a {
+    margin: 0 20px;
+    padding: 15px 15px;
+    border-radius: 50%;
+    border: 1px solid var(--Blue);
+}
+
+.socials ul li a:hover {
+    background-color: var(--Blue);
+}
+
+i {
+    color: var(--Blue)
+}
+
+i:hover {
+    color: #ffffff;
+}
+
+
+/*fonts*/
+
+h1 {
+    font-size: 2em;
+    font-weight: 300;
+    color: var(--Gray);
+}
+
+.intocont h1 span {
+    font-weight: 700;
+    color: black;
+}
+
+.intocont p {
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-bottom: 7%;
+}
+
+.copyright p {
+    color: var(--Gray);
+}
+
+
+/*mobile styles*/
+
+.logocont {
+    margin: 10%;
+}
+
+.img_holder img {
+    width: 80%;
+    height: 100%;
+}
+
+.img_holder {
+    margin-top: 10%;
+}
+
+.footer {
+    margin-top: 10%;
+}
+
+.copyright {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+/*laptops style*/
+
+@media screen and (min-width:960px) {
+    .wholecont {
+        padding-top: 0%;
+    }
+    .logocont {
+        margin: 5% auto 2% auto;
+    }
+    .intocont h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+    .intocont p {
+        font-size: 1.3em;
+        margin-bottom: 0;
+    }
+    .intouch {
+        text-align: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: auto;
+    }
+    input {
+        width: 40%;
+    }
+    .button {
+        display: inline-block;
+        width: 15%;
+        margin-left: 2%;
+    }
+    #form1 {
+        display: inline;
+    }
+    .img_holder {
+        margin-top: 2%;
+    }
+    .img_holder img {
+        width: 50%;
+    }
+    .footer {
+        margin-top: 5%;
+    }
+    .copyright {
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+}
